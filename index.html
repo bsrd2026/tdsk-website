@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="同读时空,校园共读,师生阅读,家校共读">
+    <meta name="description" content="同读时空，通过读书行动推动学校工作全面发展">
+    <title>同读时空 - 首页</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B61FF',
+                        primaryLight: '#f5f3ff',
+                        primaryDark: '#6349e8'
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- 全局自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scroll-smooth {
+                scroll-behavior: smooth;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(123, 97, 255, 0.08);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 30px rgba(123, 97, 255, 0.18);
+            }
+            .input-focus {
+                @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primaryLight text-slate-800 scroll-smooth">
+    <!-- 顶部固定导航栏 -->
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
+            <!-- Logo品牌 -->
+            <a href="index.html" class="text-2xl font-bold text-primary">同读时空</a>
+
+            <!-- PC端导航菜单 -->
+            <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                <a href="index.html" class="text-primary font-medium border-b-2 border-primary pb-1">首页</a>
+                <a href="manager.html" class="hover:text-primary transition-colors">管理干部同读</a>
+                <a href="teacher.html" class="hover:text-primary transition-colors">教师同读</a>
+                <a href="student.html" class="hover:text-primary transition-colors">学生同读</a>
+                <a href="parent.html" class="hover:text-primary transition-colors">家长同读</a>
+                <a href="forum.html" class="hover:text-primary transition-colors">主题论坛</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">沟通渠道</a>
+            </div>
+
+            <!-- 移动端汉堡按钮 -->
+            <button class="md:hidden text-slate-800 text-xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- 移动端下拉菜单 -->
+        <div class="md:hidden hidden bg-white border-t px-4 py-4 space-y-3" id="mobileMenu">
+            <a href="index.html" class="block text-primary font-medium">首页</a>
+            <a href="manager.html" class="block hover:text-primary">管理干部同读</a>
+            <a href="teacher.html" class="block hover:text-primary">教师同读</a>
+            <a href="student.html" class="block hover:text-primary">学生同读</a>
+            <a href="parent.html" class="block hover:text-primary">家长同读</a>
+            <a href="forum.html" class="block hover:text-primary">主题论坛</a>
+            <a href="contact.html" class="block hover:text-primary">沟通渠道</a>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="pt-16">
+        <!-- 全屏轮播Banner -->
+        <section class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden" id="bannerCarousel">
+            <div class="flex h-full w-full transition-transform duration-700 ease-in-out" id="carouselWrap">
+                <!-- 轮播1 -->
+                <div class="min-w-full h-full relative">
+                    <img src="https://picsum.photos/id/24/1920/1080" alt="读书banner" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold mb-4">同读时空</h1>
+                            <p class="text-[clamp(1rem,2vw,1.5rem)] max-w-3xl mx-auto">通过读书行动推动学校工作全面发展</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 轮播2 -->
+                <div class="min-w-full h-full relative">
+                    <img src="https://picsum.photos/id/20/1920/1080" alt="读书banner" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold mb-4">全员共读 · 书香校园</h1>
+                            <p class="text-[clamp(1rem,2vw,1.5rem)] max-w-3xl mx-auto">深耕阅读文化，赋能师生成长，助力校园高质量发展</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 轮播3 -->
+                <div class="min-w-full h-full relative">
+                    <img src="https://picsum.photos/id/106/1920/1080" alt="读书banner" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold mb-4">家校同读 · 共筑成长</h1>
+                            <p class="text-[clamp(1rem,2vw,1.5rem)] max-w-3xl mx-auto">打通干部、教师、学生、家长四维阅读体系</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 轮播指示器 -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+                <span class="w-3 h-3 rounded-full bg-white indicator active" data-index="0"></span>
+                <span class="w-3 h-3 rounded-full bg-white/50 indicator" data-index="1"></span>
+                <span class="w-3 h-3 rounded-full bg-white/50 indicator" data-index="2"></span>
+            </div>
+        </section>
+
+        <!-- 七大栏目快捷入口 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">七大阅读板块</h2>
+                <p class="text-slate-600">多维共读体系，打造全方位书香校园</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
+                <a href="index.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-home text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">首页</p>
+                </a>
+                <a href="manager.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-user-circle text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">管理干部同读</p>
+                </a>
+                <a href="teacher.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-graduation-cap text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">教师同读</p>
+                </a>
+                <a href="student.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-book text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">学生同读</p>
+                </a>
+                <a href="parent.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-users text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">家长同读</p>
+                </a>
+                <a href="forum.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-comments text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">主题论坛</p>
+                </a>
+                <a href="contact.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-phone text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">沟通渠道</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- 四大同读板块简介 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">四维共读体系</h2>
+                    <p class="text-slate-600">全员参与、分层阅读、共同成长</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
+                        <h3 class="text-xl font-bold text-primary mb-3">管理干部同读</h3>
+                        <p class="text-slate-600">聚焦教育管理、校园治理、师德建设类书籍，提升干部管理素养与履职能力，以读书赋能学校管理高质量发展。</p>
+                        <a href="manager.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
+                        <h3 class="text-xl font-bold text-primary mb-3">教师同读</h3>
+                        <p class="text-slate-600">围绕教育教学、课堂创新、育人理念开展共读，夯实教师专业功底，打造学习型教师队伍。</p>
+                        <a href="teacher.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
+                        <h3 class="text-xl font-bold text-primary mb-3">学生同读</h3>
+                        <p class="text-slate-600">适配各学段学生阅读需求，精选经典读物，开展共读活动，培养阅读习惯，提升综合素养。</p>
+                        <a href="student.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                    <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
+                        <h3 class="text-xl font-bold text-primary mb-3">家长同读</h3>
+                        <p class="text-slate-600">普及科学家庭教育理念，搭建家校共读桥梁，携手助力孩子身心健康成长。</p>
+                        <a href="parent.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 近期读书活动预告 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">近期读书活动预告</h2>
+                <p class="text-slate-600">丰富共读活动，营造浓厚书香校园氛围</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/110/600/400" alt="读书活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-white bg-primary px-2 py-1 rounded">校园活动</span>
+                        <h3 class="text-lg font-bold mt-3">全员经典诵读共读活动</h3>
+                        <p class="text-slate-600 text-sm mt-2">组织全校师生经典诵读，传承传统文化，涵养书香气质。</p>
+                        <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年7月下旬</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/113/600/400" alt="读书活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-white bg-primary px-2 py-1 rounded">教师活动</span>
+                        <h3 class="text-lg font-bold mt-3">教师读书沙龙分享会</h3>
+                        <p class="text-slate-600 text-sm mt-2">教师分组共读研讨，分享读书心得，交流教学新思路。</p>
+                        <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年8月上旬</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/119/600/400" alt="读书活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-white bg-primary px-2 py-1 rounded">家校活动</span>
+                        <h3 class="text-lg font-bold mt-3">亲子共读打卡挑战赛</h3>
+                        <p class="text-slate-600 text-sm mt-2">家校联动，亲子共读打卡，培养家庭阅读习惯。</p>
+                        <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年8月中旬</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 校园读书简介 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <img src="https://picsum.photos/id/105/800/600" alt="书香校园" class="w-full rounded-xl card-shadow">
+                    </div>
+                    <div>
+                        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-5">校园读书建设简介</h2>
+                        <p class="text-slate-600 mb-4 leading-relaxed">同读时空是学校重点打造的全员阅读成长平台，以“通过读书行动推动学校工作全面发展”为核心宗旨，构建干部、教师、学生、家长四维一体共读体系。</p>
+                        <p class="text-slate-600 mb-4 leading-relaxed">平台常态化开展各类共读活动、读书沙龙、主题论坛，精选优质推荐书单，搭建家校师生交流桥梁，以阅读赋能管理、赋能教学、赋能成长、赋能家校共育。</p>
+                        <p class="text-slate-600 leading-relaxed">深耕书香校园建设，让阅读成为校园常态、师生习惯、家庭风尚，助力学校教育教学工作高质量、全方位发展。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部版权栏 -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 lg:px-6 text-center">
+            <h3 class="text-2xl font-bold mb-3">同读时空</h3>
+            <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 | 全员共读 · 书香校园 · 共促成长</p>
+            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有  校园阅读专属平台</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 全局JS脚本 -->
+    <script>
+        // 1. 移动端汉堡菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        })
+
+        // 2. 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 50) navbar.classList.add('py-2');
+            else navbar.classList.remove('py-2');
+        })
+
+        // 3. 回到顶部按钮
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 400) {
+                backTop.classList.remove('opacity-0','invisible');
+                backTop.classList.add('opacity-100','visible');
+            } else {
+                backTop.classList.add('opacity-0','invisible');
+                backTop.classList.remove('opacity-100','visible');
+            }
+        })
+        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+
+        // 4. 首页轮播图
+        const carouselWrap = document.getElementById('carouselWrap');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+        const total = 3;
+        let timer = null;
+
+        // 更新轮播样式
+        function updateCarousel() {
+            carouselWrap.style.transform = `translateX(-${currentIndex * 100}%)`;
+            indicators.forEach((item, idx) => {
+                if(idx === currentIndex) {
+                    item.classList.add('bg-white');
+                    item.classList.remove('bg-white/50');
+                } else {
+                    item.classList.add('bg-white/50');
+                    item.classList.remove('bg-white');
+                }
+            })
+        }
+
+        // 自动轮播
+        function autoPlay() {
+            timer = setInterval(() => {
+                currentIndex = (currentIndex + 1) % total;
+                updateCarousel();
+            }, 5000)
+        }
+        autoPlay();
+
+        // 指示器点击切换
+        indicators.forEach((item, idx) => {
+            item.addEventListener('click', () => {
+                currentIndex = idx;
+                updateCarousel();
+            })
+        })
+    </script>
+</body>
+</html>

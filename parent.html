@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="同读时空,家长同读,家校共读,家庭教育">
+    <meta name="description" content="同读时空-家长同读，搭建家校共读桥梁，科学助力孩子成长">
+    <title>同读时空 - 家长同读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B61FF',
+                        primaryLight: '#f5f3ff',
+                        primaryDark: '#6349e8'
+                    },
+                    fontFamily: { sans: ['system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scroll-smooth { scroll-behavior: smooth; }
+            .card-shadow { box-shadow: 0 4px 20px rgba(123, 97, 255, 0.08); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(123, 97, 255, 0.18); }
+            .input-focus { @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all; }
+        }
+    </style>
+</head>
+<body class="bg-primaryLight text-slate-800 scroll-smooth">
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">同读时空</a>
+            <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+                <a href="manager.html" class="hover:text-primary transition-colors">管理干部同读</a>
+                <a href="teacher.html" class="hover:text-primary transition-colors">教师同读</a>
+                <a href="student.html" class="hover:text-primary transition-colors">学生同读</a>
+                <a href="parent.html" class="text-primary font-medium border-b-2 border-primary pb-1">家长同读</a>
+                <a href="forum.html" class="hover:text-primary transition-colors">主题论坛</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">沟通渠道</a>
+            </div>
+            <button class="md:hidden text-slate-800 text-xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t px-4 py-4 space-y-3" id="mobileMenu">
+            <a href="index.html" class="block hover:text-primary">首页</a>
+            <a href="manager.html" class="block hover:text-primary">管理干部同读</a>
+            <a href="teacher.html" class="block hover:text-primary">教师同读</a>
+            <a href="student.html" class="block hover:text-primary">学生同读</a>
+            <a href="parent.html" class="block text-primary font-medium">家长同读</a>
+            <a href="forum.html" class="block hover:text-primary">主题论坛</a>
+            <a href="contact.html" class="block hover:text-primary">沟通渠道</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- 页面头部 -->
+        <section class="bg-primary py-16 text-white">
+            <div class="container mx-auto px-4 lg:px-6 text-center">
+                <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold mb-3">家长同读</h1>
+                <p class="text-white/80 max-w-2xl mx-auto">家校共读、亲子相伴，用阅读滋养孩子成长，构建和谐家庭教育氛围</p>
+            </div>
+        </section>
+
+        <!-- 同读活动 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">同读活动</h2>
+                <p class="text-slate-600">丰富亲子共读活动，拉近家校距离，培养家庭阅读风尚</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/116/600/400" alt="家长共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">亲子共读打卡活动</h3>
+                        <p class="text-slate-600 text-sm mt-2">家长陪伴孩子每日阅读打卡，养成长期阅读习惯，记录成长点滴。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>长期常态化开展</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/122/600/400" alt="家长共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">家长读书分享会</h3>
+                        <p class="text-slate-600 text-sm mt-2">家长交流家庭教育读书心得，分享科学育儿方法与共读经验。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>每月一次线上分享</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/130/600/400" alt="家长共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">家校共读主题讲座</h3>
+                        <p class="text-slate-600 text-sm mt-2">邀请教育专家开展家庭教育讲座，指导家长科学亲子共读。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>每学期2次线下讲座</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐书单 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">推荐书单</h2>
+                    <p class="text-slate-600">适合家长阅读、助力亲子教育与家庭共读的优质书籍</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/40/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">亲子共读</span>
+                        <h3 class="font-bold text-lg mt-2">陪孩子终身阅读</h3>
+                        <p class="text-slate-600 text-sm mt-2">教会家长如何陪伴孩子阅读，打造家庭书香氛围。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/42/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">家庭教育</span>
+                        <h3 class="font-bold text-lg mt-2">温和而坚定的教养</h3>
+                        <p class="text-slate-600 text-sm mt-2">科学疏导孩子心理，建立良好亲子沟通模式。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/44/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">成长引导</span>
+                        <h3 class="font-bold text-lg mt-2">读懂孩子的成长</h3>
+                        <p class="text-slate-600 text-sm mt-2">了解青少年成长规律，精准引导孩子全面发展。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/46/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">家校共育</span>
+                        <h3 class="font-bold text-lg mt-2">家校协同育人指南</h3>
+                        <p class="text-slate-600 text-sm mt-2">打通家校共育壁垒，构建双向协同教育体系。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 lg:px-6 text-center">
+            <h3 class="text-2xl font-bold mb-3">同读时空</h3>
+            <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 | 全员共读 · 书香校园 · 共促成长</p>
+            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有  校园阅读专属平台</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部 -->
+    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        })
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('py-2', window.scrollY > 50))
+
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('opacity-100', window.scrollY > 400);
+            backTop.classList.toggle('visible', window.scrollY > 400);
+            backTop.classList.toggle('opacity-0', window.scrollY <= 400);
+            backTop.classList.toggle('invisible', window.scrollY <= 400);
+        })
+        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="同读时空,干部同读,校园管理阅读">
+    <meta name="description" content="同读时空-管理干部同读，以阅读赋能校园管理发展">
+    <title>同读时空 - 管理干部同读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B61FF',
+                        primaryLight: '#f5f3ff',
+                        primaryDark: '#6349e8'
+                    },
+                    fontFamily: { sans: ['system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scroll-smooth { scroll-behavior: smooth; }
+            .card-shadow { box-shadow: 0 4px 20px rgba(123, 97, 255, 0.08); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(123, 97, 255, 0.18); }
+            .input-focus { @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all; }
+        }
+    </style>
+</head>
+<body class="bg-primaryLight text-slate-800 scroll-smooth">
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">同读时空</a>
+            <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+                <a href="manager.html" class="text-primary font-medium border-b-2 border-primary pb-1">管理干部同读</a>
+                <a href="teacher.html" class="hover:text-primary transition-colors">教师同读</a>
+                <a href="student.html" class="hover:text-primary transition-colors">学生同读</a>
+                <a href="parent.html" class="hover:text-primary transition-colors">家长同读</a>
+                <a href="forum.html" class="hover:text-primary transition-colors">主题论坛</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">沟通渠道</a>
+            </div>
+            <button class="md:hidden text-slate-800 text-xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t px-4 py-4 space-y-3" id="mobileMenu">
+            <a href="index.html" class="block hover:text-primary">首页</a>
+            <a href="manager.html" class="block text-primary font-medium">管理干部同读</a>
+            <a href="teacher.html" class="block hover:text-primary">教师同读</a>
+            <a href="student.html" class="block hover:text-primary">学生同读</a>
+            <a href="parent.html" class="block hover:text-primary">家长同读</a>
+            <a href="forum.html" class="block hover:text-primary">主题论坛</a>
+            <a href="contact.html" class="block hover:text-primary">沟通渠道</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- 页面头部横幅 -->
+        <section class="bg-primary py-16 text-white">
+            <div class="container mx-auto px-4 lg:px-6 text-center">
+                <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold mb-3">管理干部同读</h1>
+                <p class="text-white/80 max-w-2xl mx-auto">深耕管理阅读，提升履职素养，以读书赋能学校高质量管理发展</p>
+            </div>
+        </section>
+
+        <!-- 模块1：同读活动 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">同读活动</h2>
+                <p class="text-slate-600">干部专属共读活动，交流管理经验，提升综合能力</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/180/600/400" alt="干部共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">校园管理专题共读会</h3>
+                        <p class="text-slate-600 text-sm mt-2">聚焦校园治理、团队管理、教育政策，干部集中共读研讨，梳理工作新思路。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>活动时间：每月第二周周五</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/239/600/400" alt="干部共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">干部读书心得交流会</h3>
+                        <p class="text-slate-600 text-sm mt-2">全员分享读书感悟，结合岗位工作复盘总结，推动读书成果落地。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>活动时间：每季度末集中开展</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                    <img src="https://picsum.photos/id/49/600/400" alt="干部共读活动" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold">管理书籍研学沙龙</h3>
+                        <p class="text-slate-600 text-sm mt-2">精选教育管理经典书籍，分组深度研学，碰撞管理创新思路。</p>
+                        <p class="text-primary text-sm mt-4"><i class="fa fa-calendar mr-1"></i>活动时间：寒暑假专项开展</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模块2：推荐书单 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">推荐书单</h2>
+                    <p class="text-slate-600">适配学校管理干部阅读的优质书籍，助力能力提升</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/24/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">管理必备</span>
+                        <h3 class="font-bold text-lg mt-2">学校高效管理之道</h3>
+                        <p class="text-slate-600 text-sm mt-2">详解校园日常管理、团队建设、制度落地实操方法，贴合校园工作场景。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/26/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">教育治理</span>
+                        <h3 class="font-bold text-lg mt-2">新时代教育治理研究</h3>
+                        <p class="text-slate-600 text-sm mt-2">解读新时代教育政策，助力干部树立科学教育管理理念。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/28/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">团队管理</span>
+                        <h3 class="font-bold text-lg mt-2">教育团队赋能管理</h3>
+                        <p class="text-slate-600 text-sm mt-2">聚焦教师团队管理、人才培养、团队凝聚力建设实战方法。</p>
+                    </div>
+                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
+                        <img src="https://picsum.photos/id/36/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
+                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">素养提升</span>
+                        <h3 class="font-bold text-lg mt-2">教育管理者素养修炼</h3>
+                        <p class="text-slate-600 text-sm mt-2">全方位提升教育管理者格局、思维、履职与统筹能力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 lg:px-6 text-center">
+            <h3 class="text-2xl font-bold mb-3">同读时空</h3>
+            <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 | 全员共读 · 书香校园 · 共促成长</p>
+            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有  校园阅读专属平台</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部 -->
+    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 全局JS -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        })
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('py-2', window.scrollY > 50))
+
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('opacity-100', window.scrollY > 400);
+            backTop.classList.toggle('visible', window.scrollY > 400);
+            backTop.classList.toggle('opacity-0', window.scrollY <= 400);
+            backTop.classList.toggle('invisible', window.scrollY <= 400);
+        })
+        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+    </script>
+</body>
+</html>

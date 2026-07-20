@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="同读时空,学校合作,校园招聘,人才观,联系我们">
+    <meta name="description" content="同读时空沟通渠道，包含学校合作、校园招聘及人才理念介绍">
+    <title>同读时空 - 沟通渠道</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B61FF',
+                        primaryLight: '#f5f3ff',
+                        primaryDark: '#6349e8'
+                    },
+                    fontFamily: { sans: ['system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scroll-smooth { scroll-behavior: smooth; }
+            .card-shadow { box-shadow: 0 4px 20px rgba(123, 97, 255, 0.08); }
+            .card-hover { transition: all 0.3s ease; }
+            .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(123, 97, 255, 0.18); }
+            .input-focus { @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all; }
+        }
+    </style>
+</head>
+<body class="bg-primaryLight text-slate-800 scroll-smooth">
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-primary">同读时空</a>
+            <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                <a href="index.html" class="hover:text-primary transition-colors">首页</a>
+                <a href="manager.html" class="hover:text-primary transition-colors">管理干部同读</a>
+                <a href="teacher.html" class="hover:text-primary transition-colors">教师同读</a>
+                <a href="student.html" class="hover:text-primary transition-colors">学生同读</a>
+                <a href="parent.html" class="hover:text-primary transition-colors">家长同读</a>
+                <a href="forum.html" class="hover:text-primary transition-colors">主题论坛</a>
+                <a href="contact.html" class="text-primary font-medium border-b-2 border-primary pb-1">沟通渠道</a>
+            </div>
+            <button class="md:hidden text-slate-800 text-xl" id="menuBtn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-white border-t px-4 py-4 space-y-3" id="mobileMenu">
+            <a href="index.html" class="block hover:text-primary">首页</a>
+            <a href="manager.html" class="block hover:text-primary">管理干部同读</a>
+            <a href="teacher.html" class="block hover:text-primary">教师同读</a>
+            <a href="student.html" class="block hover:text-primary">学生同读</a>
+            <a href="parent.html" class="block hover:text-primary">家长同读</a>
+            <a href="forum.html" class="block hover:text-primary">主题论坛</a>
+            <a href="contact.html" class="block text-primary font-medium">沟通渠道</a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+        <!-- 页面头部 -->
+        <section class="bg-primary py-16 text-white">
+            <div class="container mx-auto px-4 lg:px-6 text-center">
+                <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold mb-3">沟通渠道</h1>
+                <p class="text-white/80 max-w-2xl mx-auto">校企合作对接、人才招聘咨询，搭建高效双向沟通桥梁</p>
+            </div>
+        </section>
+
+        <!-- 学校合作板块 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-6 text-center">学校合作</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <img src="https://picsum.photos/id/28/800/600" alt="学校合作" class="w-full rounded-xl card-shadow">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-primary mb-4">携手共建书香校园合作项目</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">同读时空面向各类学校、教育机构开放合作，共建共读活动、书香校园打造、师资阅读培训、家校共育体系等项目。</p>
+                        <p class="text-slate-600 mb-4 leading-relaxed">我们秉持开放、共赢、深耕教育的合作理念，以阅读赋能校园发展，助力学校教育教学工作全方位提升。</p>
+                        <div class="space-y-2 text-slate-700">
+                            <p><i class="fa fa-phone text-primary mr-2"></i>合作电话：010-12345678</p>
+                            <p><i class="fa fa-envelope text-primary mr-2"></i>合作邮箱：tongdu@school.com</p>
+                            <p><i class="fa fa-map-marker text-primary mr-2"></i>学校地址：XX省XX市教育园区书香路1号</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 合作咨询表单 -->
+                <div class="mt-16 bg-white p-8 rounded-xl card-shadow">
+                    <h3 class="text-xl font-bold mb-6">合作咨询表单</h3>
+                    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate-700 mb-2">单位名称</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-2 input-focus" placeholder="请输入单位名称">
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 mb-2">联系人</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-2 input-focus" placeholder="请输入联系人姓名">
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 mb-2">联系电话</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-2 input-focus" placeholder="请输入联系电话">
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 mb-2">合作类型</label>
+                            <input type="text" class="w-full border border-slate-300 rounded-lg px-4 py-2 input-focus" placeholder="如：共读活动合作、校园文化共建">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-slate-700 mb-2">合作描述</label>
+                            <textarea rows="4" class="w-full border border-slate-300 rounded-lg px-4 py-2 input-focus" placeholder="请简要描述合作需求"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primaryDark transition-all">提交咨询</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 招聘&人才观板块 -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-6">
+                <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-6 text-center">招聘专区 · 我们的人才观</h2>
+                <div class="max-w-3xl mx-auto mb-12">
+                    <h3 class="text-xl font-bold text-primary mb-4">我们的人才观</h3>
+                    <p class="text-slate-600 mb-3 leading-relaxed">同读时空深耕校园阅读教育事业，始终坚持“热爱教育、深耕专业、务实创新、协同共进”的人才理念。我们尊重每一位从业者的专业价值，致力于为教育工作者、新媒体运营、文化策划等相关人才提供成长平台。</p>
+                    <p class="text-slate-600 leading-relaxed">我们看重责任心、学习力、创新力与教育情怀，鼓励员工扎根教育、持续成长，与平台共同推动书香校园建设事业长远发展。</p>
+                </div>
+
+                <!-- 招聘岗位列表 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-primaryLight p-6 rounded-xl card-shadow card-hover">
+                        <h3 class="text-lg font-bold">校园阅读活动策划</h3>
+                        <p class="text-sm text-slate-500 mt-2">教育类 | 全职 | 校园岗</p>
+                        <p class="text-slate-600 text-sm mt-3">负责校园共读活动策划、落地执行、复盘总结，打造特色书香校园活动。</p>
+                        <button class="mt-4 text-primary border border-primary px-4 py-1 rounded hover:bg-primary hover:text-white transition-all">投递简历</button>
+                    </div>
+                    <div class="bg-primaryLight p-6 rounded-xl card-shadow card-hover">
+                        <h3 class="text-lg font-bold">教育文案编辑</h3>
+                        <p class="text-sm text-slate-500 mt-2">文案类 | 全职 | 可实习</p>
+                        <p class="text-slate-600 text-sm mt-3">负责读书书单推荐、教育推文、活动文案撰写，输出优质教育内容。</p>
+                        <button class="mt-4 text-primary border border-primary px-4 py-1 rounded hover:bg-primary hover:text-white transition-all">投递简历</button>
+                    </div>
+                    <div class="bg-primaryLight p-6 rounded-xl card-shadow card-hover">
+                        <h3 class="text-lg font-bold">家校共育专员</h3>
+                        <p class="text-sm text-slate-500 mt-2">运营类 | 全职</p>
+                        <p class="text-slate-600 text-sm mt-3">负责家长共读运营、家校沟通、亲子活动组织与用户维护工作。</p>
+                        <button class="mt-4 text-primary border border-primary px-4 py-1 rounded hover:bg-primary hover:text-white transition-all">投递简历</button>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <p class="text-slate-600 mb-4">欢迎热爱教育、热爱阅读的有志之士加入我们！</p>
+                    <a href="mailto:hr@tongdu.com" class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primaryDark transition-all">简历投递邮箱：hr@tongdu.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-slate-900 text-white py-10">
+        <div class="container mx-auto px-4 lg:px-6 text-center">
+            <h3 class="text-2xl font-bold mb-3">同读时空</h3>
+            <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 | 全员共读 · 书香校园 · 共促成长</p>
+            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有  校园阅读专属平台</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部 -->
+    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- 弹窗提示组件 -->
+    <div id="toast" class="fixed top-24 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 invisible transition-all z-50">
+        提交成功！我们将尽快与您联系
+    </div>
+
+    <script>
+        // 移动端菜单
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        })
+
+        // 导航滚动
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('py-2', window.scrollY > 50))
+
+        // 回到顶部
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('opacity-100', window.scrollY > 400);
