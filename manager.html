@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +33,7 @@
         }
     </style>
 </head>
+
 <body class="bg-primaryLight text-slate-800 scroll-smooth">
     <!-- 顶部导航 -->
     <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
@@ -104,54 +106,114 @@
             </div>
         </section>
 
-        <!-- 模块2：推荐书单 -->
+        <!-- 推荐书单 左右交互书架板块 -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">推荐书单</h2>
-                    <p class="text-slate-600">适配学校管理干部阅读的优质书籍，助力能力提升</p>
+                    <p class="text-slate-600">点击左侧书籍条目，查看对应书籍封面详情</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/24/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">管理必备</span>
-                        <h3 class="font-bold text-lg mt-2">学校高效管理之道</h3>
-                        <p class="text-slate-600 text-sm mt-2">详解校园日常管理、团队建设、制度落地实操方法，贴合校园工作场景。</p>
+
+                <!-- 桌面左右分栏 / 移动端上下布局 -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <!-- 左侧：10本图书文字列表 -->
+                    <div class="bg-primaryLight rounded-xl p-6 card-shadow">
+                        <h3 class="text-xl font-bold text-primary mb-6 pb-3 border-b border-primary/20">精选阅读书目（10本）</h3>
+                        <ul class="space-y-3 book-list">
+                            <!-- 书籍条目 循环10本 -->
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="1">
+                                <p class="font-medium text-slate-800">《学校高效管理之道》</p>
+                                <p class="text-sm text-slate-500">作者：李建峰</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="2">
+                                <p class="font-medium text-slate-800">《新时代教育治理研究》</p>
+                                <p class="text-sm text-slate-500">作者：张雅茹</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="3">
+                                <p class="font-medium text-slate-800">《教育团队赋能管理》</p>
+                                <p class="text-sm text-slate-500">作者：王浩然</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="4">
+                                <p class="font-medium text-slate-800">《教育管理者素养修炼》</p>
+                                <p class="text-sm text-slate-500">作者：陈静怡</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="5">
+                                <p class="font-medium text-slate-800">《校园文化建设实操手册》</p>
+                                <p class="text-sm text-slate-500">作者：周明远</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="6">
+                                <p class="font-medium text-slate-800">《基础教育改革实践思考》</p>
+                                <p class="text-sm text-slate-500">作者：吴淑华</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="7">
+                                <p class="font-medium text-slate-800">《校长领导力修炼》</p>
+                                <p class="text-sm text-slate-500">作者：赵鹏程</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="8">
+                                <p class="font-medium text-slate-800">《家校协同管理指南》</p>
+                                <p class="text-sm text-slate-500">作者：孙若溪</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="9">
+                                <p class="font-medium text-slate-800">《校园德育体系搭建》</p>
+                                <p class="text-sm text-slate-500">作者：林泽宇</p>
+                            </li>
+                            <li class="book-item p-3 rounded-lg cursor-pointer transition-all hover:bg-primary/10"
+                                data-book-id="10">
+                                <p class="font-medium text-slate-800">《书香校园整体规划》</p>
+                                <p class="text-sm text-slate-500">作者：郑晓桐</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/26/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">教育治理</span>
-                        <h3 class="font-bold text-lg mt-2">新时代教育治理研究</h3>
-                        <p class="text-slate-600 text-sm mt-2">解读新时代教育政策，助力干部树立科学教育管理理念。</p>
-                    </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/28/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">团队管理</span>
-                        <h3 class="font-bold text-lg mt-2">教育团队赋能管理</h3>
-                        <p class="text-slate-600 text-sm mt-2">聚焦教师团队管理、人才培养、团队凝聚力建设实战方法。</p>
-                    </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/36/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">素养提升</span>
-                        <h3 class="font-bold text-lg mt-2">教育管理者素养修炼</h3>
-                        <p class="text-slate-600 text-sm mt-2">全方位提升教育管理者格局、思维、履职与统筹能力。</p>
+
+                    <!-- 右侧：书架背景 + 弹出书籍封面容器 -->
+                    <div class="relative">
+                        <!-- 书架背景大图 -->
+                        <img src="https://picsum.photos/id/1060/900/700" alt="书香书架背景"
+                            class="w-full rounded-xl card-shadow object-cover h-[65vh]">
+
+                        <!-- 弹出书籍封面盒子（默认隐藏） -->
+                        <div id="bookPopup"
+                            class="absolute inset-0 flex items-center justify-center opacity-0 invisible transition-all duration-500 z-10">
+                            <div
+                                class="bg-white p-4 rounded-xl shadow-2xl relative transform scale-90 transition-transform duration-500 book-card-box">
+                                <!-- 关闭按钮 -->
+                                <button id="closeBookPopup"
+                                    class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                                <!-- 书籍封面图片动态填充区域 -->
+                                <img id="popupBookImg" src="" alt="书籍封面"
+                                    class="w-[260px] h-[380px] object-cover rounded-lg">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    <!-- 弹窗遮罩背景 -->
+    <div id="bookOverlay" class="fixed inset-0 bg-black/40 z-[999] hidden"></div>
     <!-- 底部 -->
     <footer class="bg-slate-900 text-white py-10">
         <div class="container mx-auto px-4 lg:px-6 text-center">
             <h3 class="text-2xl font-bold mb-3">同读时空</h3>
             <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 </p>
-            <p class="text-slate-500 text-sm">© 博思睿达 （北京）教育咨询有限公司   版权所有</p>
+            <p class="text-slate-500 text-sm">© 博思睿达 （北京）教育咨询有限公司 版权所有</p>
         </div>
     </footer>
 
     <!-- 回到顶部 -->
-    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+    <button id="backTop"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
         <i class="fa fa-arrow-up"></i>
     </button>
 
@@ -176,7 +238,71 @@
             backTop.classList.toggle('opacity-0', window.scrollY <= 400);
             backTop.classList.toggle('invisible', window.scrollY <= 400);
         })
-        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
+        // ===================== 左侧书单点击弹出书架书籍交互逻辑 =====================
+        // 10本书籍数据源：ID对应封面图片链接，可自行替换图片地址
+        const booksData = {
+            1: { img: "https://picsum.photos/id/24/300/420" },
+            2: { img: "https://picsum.photos/id/26/300/420" },
+            3: { img: "https://picsum.photos/id/28/300/420" },
+            4: { img: "https://picsum.photos/id/36/300/420" },
+            5: { img: "https://picsum.photos/id/40/300/420" },
+            6: { img: "https://picsum.photos/id/42/300/420" },
+            7: { img: "https://picsum.photos/id/44/300/420" },
+            8: { img: "https://picsum.photos/id/46/300/420" },
+            9: { img: "https://picsum.photos/id/50/300/420" },
+            10: { img: "https://picsum.photos/id/52/300/420" }
+        };
+
+        // DOM元素获取
+        const bookItems = document.querySelectorAll('.book-item');
+        const bookPopup = document.getElementById('bookPopup');
+        const popupImg = document.getElementById('popupBookImg');
+        const closeBtn = document.getElementById('closeBookPopup');
+        const overlay = document.getElementById('bookOverlay');
+        const bookCardBox = document.querySelector('.book-card-box');
+
+        // 打开书籍弹窗函数
+        function openBookModal(bookId) {
+            // 填充对应书籍封面
+            popupImg.src = booksData[bookId].img;
+            // 显示弹窗+动画缩放弹出
+            bookPopup.classList.remove('opacity-0', 'invisible');
+            bookPopup.classList.add('opacity-100', 'visible');
+            bookCardBox.classList.remove('scale-90');
+            bookCardBox.classList.add('scale-100');
+            overlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 关闭书籍弹窗函数
+        function closeBookModal() {
+            bookPopup.classList.add('opacity-0', 'invisible');
+            bookPopup.classList.remove('opacity-100', 'visible');
+            bookCardBox.classList.add('scale-90');
+            bookCardBox.classList.remove('scale-100');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // 给每一个左侧书目绑定点击事件
+        bookItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.dataset.bookId;
+                openBookModal(id);
+            })
+        })
+
+        // 关闭触发事件
+        closeBtn.addEventListener('click', closeBookModal);
+        overlay.addEventListener('click', closeBookModal);
+        // ESC按键关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !bookPopup.classList.contains('invisible')) {
+                closeBookModal();
+            }
+        })
     </script>
 </body>
+
 </html>
