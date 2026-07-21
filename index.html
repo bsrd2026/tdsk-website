@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +50,7 @@
         }
     </style>
 </head>
+
 <body class="bg-primaryLight text-slate-800 scroll-smooth">
     <!-- 顶部固定导航栏 -->
     <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
@@ -178,22 +180,26 @@
                     <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
                         <h3 class="text-xl font-bold text-primary mb-3">管理干部同读</h3>
                         <p class="text-slate-600">聚焦教育管理、校园治理、师德建设类书籍，提升干部管理素养与履职能力，以读书赋能学校管理高质量发展。</p>
-                        <a href="manager.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                        <a href="manager.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
                         <h3 class="text-xl font-bold text-primary mb-3">教师同读</h3>
                         <p class="text-slate-600">围绕教育教学、课堂创新、育人理念开展共读，夯实教师专业功底，打造学习型教师队伍。</p>
-                        <a href="teacher.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                        <a href="teacher.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
                         <h3 class="text-xl font-bold text-primary mb-3">学生同读</h3>
                         <p class="text-slate-600">适配各学段学生阅读需求，精选经典读物，开展共读活动，培养阅读习惯，提升综合素养。</p>
-                        <a href="student.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                        <a href="student.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                     <div class="p-6 bg-primaryLight rounded-xl card-shadow card-hover">
                         <h3 class="text-xl font-bold text-primary mb-3">家长同读</h3>
                         <p class="text-slate-600">普及科学家庭教育理念，搭建家校共读桥梁，携手助力孩子身心健康成长。</p>
-                        <a href="parent.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i class="fa fa-angle-right"></i></a>
+                        <a href="parent.html" class="inline-block mt-4 text-primary hover:text-primaryDark">查看详情 <i
+                                class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -206,47 +212,75 @@
                 <p class="text-slate-600">丰富共读活动，营造浓厚书香校园氛围</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                <!-- 活动1 可点击弹窗 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover cursor-pointer activity-card"
+                    data-id="1">
                     <img src="https://picsum.photos/id/110/600/400" alt="读书活动" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs text-white bg-primary px-2 py-1 rounded">校园活动</span>
                         <h3 class="text-lg font-bold mt-3">全员经典诵读共读活动</h3>
                         <p class="text-slate-600 text-sm mt-2">组织全校师生经典诵读，传承传统文化，涵养书香气质。</p>
                         <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年7月下旬</p>
+                        <p class="text-xs text-slate-500 mt-2">点击卡片查看完整详情</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                <!-- 活动2 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover cursor-pointer activity-card"
+                    data-id="2">
                     <img src="https://picsum.photos/id/113/600/400" alt="读书活动" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs text-white bg-primary px-2 py-1 rounded">教师活动</span>
                         <h3 class="text-lg font-bold mt-3">教师读书沙龙分享会</h3>
                         <p class="text-slate-600 text-sm mt-2">教师分组共读研讨，分享读书心得，交流教学新思路。</p>
                         <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年8月上旬</p>
+                        <p class="text-xs text-slate-500 mt-2">点击卡片查看完整详情</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
+                <!-- 活动3 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover cursor-pointer activity-card"
+                    data-id="3">
                     <img src="https://picsum.photos/id/119/600/400" alt="读书活动" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs text-white bg-primary px-2 py-1 rounded">家校活动</span>
                         <h3 class="text-lg font-bold mt-3">亲子共读打卡挑战赛</h3>
                         <p class="text-slate-600 text-sm mt-2">家校联动，亲子共读打卡，培养家庭阅读习惯。</p>
                         <p class="text-primary text-sm mt-3"><i class="fa fa-calendar mr-1"></i>2026年8月中旬</p>
+                        <p class="text-xs text-slate-500 mt-2">点击卡片查看完整详情</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- 活动详情弹窗模态框（默认隐藏，点击卡片弹出） -->
+        <div id="activityModal"
+            class="fixed inset-0 bg-black/60 z-[999] flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+            <div class="bg-white rounded-xl max-w-2xl w-full max-h-[85vh] overflow-y-auto card-shadow relative">
+                <!-- 关闭按钮 -->
+                <button id="closeModal"
+                    class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-primary hover:text-white transition-colors flex items-center justify-center text-slate-700">
+                    <i class="fa fa-times"></i>
+                </button>
+                <!-- 弹窗内容区域 -->
+                <div id="modalContent" class="p-6">
+                    <!-- JS动态填充内容 -->
+                </div>
+            </div>
+        </div>
 
         <!-- 校园读书简介 -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4 lg:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     <div>
-                        <img src="https://picsum.photos/id/105/800/600" alt="书香校园" class="w-full rounded-xl card-shadow">
+                        <img src="https://picsum.photos/id/105/800/600" alt="书香校园"
+                            class="w-full rounded-xl card-shadow">
                     </div>
                     <div>
                         <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-5">校园读书建设简介</h2>
-                        <p class="text-slate-600 mb-4 leading-relaxed">同读时空是学校重点打造的全员阅读成长平台，以“通过读书行动推动学校工作全面发展”为核心宗旨，构建干部、教师、学生、家长四维一体共读体系。</p>
-                        <p class="text-slate-600 mb-4 leading-relaxed">平台常态化开展各类共读活动、读书沙龙、主题论坛，精选优质推荐书单，搭建家校师生交流桥梁，以阅读赋能管理、赋能教学、赋能成长、赋能家校共育。</p>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            同读时空是学校重点打造的全员阅读成长平台，以“通过读书行动推动学校工作全面发展”为核心宗旨，构建干部、教师、学生、家长四维一体共读体系。</p>
+                        <p class="text-slate-600 mb-4 leading-relaxed">
+                            平台常态化开展各类共读活动、读书沙龙、主题论坛，精选优质推荐书单，搭建家校师生交流桥梁，以阅读赋能管理、赋能教学、赋能成长、赋能家校共育。</p>
                         <p class="text-slate-600 leading-relaxed">深耕书香校园建设，让阅读成为校园常态、师生习惯、家庭风尚，助力学校教育教学工作高质量、全方位发展。</p>
                     </div>
                 </div>
@@ -259,12 +293,13 @@
         <div class="container mx-auto px-4 lg:px-6 text-center">
             <h3 class="text-2xl font-bold mb-3">同读时空</h3>
             <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 | 全员共读 · 书香校园 · 共促成长</p>
-            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有  校园阅读专属平台</p>
+            <p class="text-slate-500 text-sm">© 2026 同读时空 版权所有 校园阅读专属平台</p>
         </div>
     </footer>
 
     <!-- 回到顶部按钮 -->
-    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+    <button id="backTop"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
         <i class="fa fa-arrow-up"></i>
     </button>
 
@@ -283,22 +318,22 @@
         // 2. 导航栏滚动效果
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
-            if(window.scrollY > 50) navbar.classList.add('py-2');
+            if (window.scrollY > 50) navbar.classList.add('py-2');
             else navbar.classList.remove('py-2');
         })
 
         // 3. 回到顶部按钮
         const backTop = document.getElementById('backTop');
         window.addEventListener('scroll', () => {
-            if(window.scrollY > 400) {
-                backTop.classList.remove('opacity-0','invisible');
-                backTop.classList.add('opacity-100','visible');
+            if (window.scrollY > 400) {
+                backTop.classList.remove('opacity-0', 'invisible');
+                backTop.classList.add('opacity-100', 'visible');
             } else {
-                backTop.classList.add('opacity-0','invisible');
-                backTop.classList.remove('opacity-100','visible');
+                backTop.classList.add('opacity-0', 'invisible');
+                backTop.classList.remove('opacity-100', 'visible');
             }
         })
-        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
 
         // 4. 首页轮播图
         const carouselWrap = document.getElementById('carouselWrap');
@@ -311,7 +346,7 @@
         function updateCarousel() {
             carouselWrap.style.transform = `translateX(-${currentIndex * 100}%)`;
             indicators.forEach((item, idx) => {
-                if(idx === currentIndex) {
+                if (idx === currentIndex) {
                     item.classList.add('bg-white');
                     item.classList.remove('bg-white/50');
                 } else {
@@ -337,6 +372,95 @@
                 updateCarousel();
             })
         })
+        // ===================== 活动卡片点击弹窗详情逻辑 =====================
+        // 1. 所有活动完整详情数据（可自由修改文字、图片）
+        const activityData = {
+            1: {
+                img: "https://picsum.photos/id/110/1200/800",
+                tag: "校园全员活动",
+                title: "全员经典诵读共读活动",
+                time: "活动时间：2026年7月下旬 全校分批次开展",
+                detail: `
+            <p class="mb-4 text-slate-700 leading-relaxed">本次全员经典诵读共读活动面向全校干部、教师、学生同步开展，以中华传统文化经典篇目为阅读核心。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">活动分为班级诵读展演、年级诵读比拼、校园大型诵读汇演三大环节，各班提前15天开展日常排练与篇目共读。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">旨在让全体师生浸润经典书香，传承中华优秀传统文化，夯实人文底蕴，进一步推进书香校园建设落地。</p>
+            <p class="text-primary font-medium">参与对象：全体在校师生</p>
+        `
+            },
+            2: {
+                img: "https://picsum.photos/id/113/1200/800",
+                tag: "教师专项活动",
+                title: "教师读书沙龙分享会",
+                time: "活动时间：2026年8月上旬 每周三下午教研时段",
+                detail: `
+            <p class="mb-4 text-slate-700 leading-relaxed">教师读书沙龙以分学科教研组为单位定期举办，围绕教育教学、班级管理、师德修养类共读书籍开展深度交流研讨。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">每位教师轮流担任分享主讲人，结合自身一线授课经历，分享读书感悟、教学改进方案与育人心得。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">活动结束后统一整理优秀心得文稿，收录至同读时空教师阅读文集，留存教研成果。</p>
+            <p class="text-primary font-medium">参与对象：全体在岗任课教师、教研人员</p>
+        `
+            },
+            3: {
+                img: "https://picsum.photos/id/119/1200/800",
+                tag: "家校共育活动",
+                title: "亲子共读打卡挑战赛",
+                time: "活动时间：2026年8月中旬-9月中旬 为期30天打卡周期",
+                detail: `
+            <p class="mb-4 text-slate-700 leading-relaxed">亲子共读打卡挑战赛是家校协同阅读核心活动，鼓励家长每日陪伴孩子固定时长课外阅读，每日线上打卡记录阅读内容。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">活动设置每日打卡、每周心得随笔、月末亲子阅读短视频分享多个任务，全程由班主任跟进督促。</p>
+            <p class="mb-4 text-slate-700 leading-relaxed">活动结束按照打卡时长、完成质量评选书香家庭、阅读小明星奖项，颁发纸质荣誉证书与阅读礼品。</p>
+            <p class="text-primary font-medium">参与对象：全体在校学生及家长</p>
+        `
+            }
+        };
+
+        const modal = document.getElementById('activityModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalBtn = document.getElementById('closeModal');
+        const activityCards = document.querySelectorAll('.activity-card');
+
+        // 打开弹窗填充内容
+        activityCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.dataset.id;
+                const data = activityData[id];
+                // 拼接弹窗HTML内容
+                modalContent.innerHTML = `
+            <img src="${data.img}" alt="${data.title}" class="w-full h-64 object-cover rounded-lg mb-6">
+            <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded text-sm">${data.tag}</span>
+            <h3 class="text-2xl font-bold mt-3 mb-2">${data.title}</h3>
+            <p class="text-slate-500 mb-4"><i class="fa fa-calendar text-primary mr-2"></i>${data.time}</p>
+            <div class="border-t pt-4">
+                <h4 class="font-semibold text-lg mb-3">活动详情介绍</h4>
+                ${data.detail}
+            </div>
+        `;
+                // 弹窗淡入显示
+                modal.classList.remove('opacity-0', 'invisible');
+                modal.classList.add('opacity-100', 'visible');
+                // 打开弹窗禁止页面滚动
+                document.body.style.overflow = 'hidden';
+            })
+        })
+
+        // 关闭弹窗函数
+        function hideModal() {
+            modal.classList.add('opacity-0', 'invisible');
+            modal.classList.remove('opacity-100', 'visible');
+            document.body.style.overflow = '';
+        }
+        // 点击关闭按钮关闭
+        closeModalBtn.addEventListener('click', hideModal);
+        // 点击弹窗黑色背景空白处关闭
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) hideModal();
+        })
+        // 按下键盘ESC键关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
+                hideModal();
+            }
+        })
     </script>
 </body>
+
 </html>
