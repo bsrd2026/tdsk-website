@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +33,7 @@
         }
     </style>
 </head>
+
 <body class="bg-primaryLight text-slate-800 scroll-smooth">
     <!-- 顶部导航 -->
     <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
@@ -86,7 +88,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
-                    <img src="images/teacher2.jpg" alt="教师共读活动"  class="w-full h-48 object-cover">
+                    <img src="images/teacher2.jpg" alt="教师共读活动" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-lg font-bold">教师读书分享沙龙</h3>
                         <p class="text-slate-600 text-sm mt-2">全员分享读书心得，交流育人经验，碰撞教育新思路。</p>
@@ -94,7 +96,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover">
-                    <img src="images/teacher3.jpg" alt="教师共读活动"  class="w-full h-48 object-cover">
+                    <img src="images/teacher3.jpg" alt="教师共读活动" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-lg font-bold">师德师风专题共读</h3>
                         <p class="text-slate-600 text-sm mt-2">共读师德建设书籍，涵养高尚师德，践行育人初心。</p>
@@ -105,40 +107,94 @@
         </section>
 
         <!-- 推荐书单 -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4 lg:px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-3">推荐书单</h2>
-                    <p class="text-slate-600">适配教师教学、育人、成长的优质读物</p>
+        <section class="py-10 px-4 md:px-8 lg:px-12">
+            <h2 class="text-[clamp(1.8rem,4vw,2.2rem)] font-bold mb-8 text-[#7B61FF]">一线教师推荐书单</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <!-- 左侧书目列表 -->
+                <div class="lg:col-span-2 bg-white rounded-xl card-shadow p-5 max-h-[70vh] overflow-y-auto">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4 border-b pb-2">书单目录</h3>
+                    <div id="teacherBookList" class="space-y-2">
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t1">
+                            <div class="font-medium">《聪明教学7原理》</div>
+                            <div class="text-sm text-gray-500">苏珊·A·安布罗斯</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t2">
+                            <div class="font-medium">《思维导图》</div>
+                            <div class="text-sm text-gray-500">东尼·博赞</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t3">
+                            <div class="font-medium">《积极学习101种有效教学策略》</div>
+                            <div class="text-sm text-gray-500">M·希尔伯曼</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t4">
+                            <div class="font-medium">《引导工具箱》</div>
+                            <div class="text-sm text-gray-500">森 时彦</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t5">
+                            <div class="font-medium">《学习性评价行动建议200条》</div>
+                            <div class="text-sm text-gray-500">剑桥教育</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t6">
+                            <div class="font-medium">《为深度学习而教》</div>
+                            <div class="text-sm text-gray-500">杰伊·麦克泰</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t7">
+                            <div class="font-medium">《卓越教师的200条教学策略》</div>
+                            <div class="text-sm text-gray-500">安德烈·雷德芬</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t8">
+                            <div class="font-medium">《如何阅读一本书》</div>
+                            <div class="text-sm text-gray-500">莫提默·J.艾德勒</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t9">
+                            <div class="font-medium">《改善学生课堂表现的50个方法》</div>
+                            <div class="text-sm text-gray-500">安奈特·布鲁肖</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t10">
+                            <div class="font-medium">《课堂研究》</div>
+                            <div class="text-sm text-gray-500">钟启泉</div>
+                        </div>
+                        <div class="book-item px-3 py-2 rounded-lg cursor-pointer transition-all hover:bg-purple-50 hover:text-[#7B61FF]"
+                            data-id="t11">
+                            <div class="font-medium">《有效教学决策（第6版）》</div>
+                            <div class="text-sm text-gray-500">威廉·威伦</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/30/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">教学教研</span>
-                        <h3 class="font-bold text-lg mt-2">高效课堂教学设计</h3>
-                        <p class="text-slate-600 text-sm mt-2">系统讲解课堂设计、互动教学、高效授课实操技巧。</p>
+
+                <!-- 右侧详情面板 -->
+                <div class="lg:col-span-3 bg-white rounded-xl card-shadow p-6">
+                    <div id="teacherEmptyTip" class="h-full flex items-center justify-center text-gray-400 text-lg">
+                        点击左侧书目，查看书籍简介与推荐书评
                     </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/31/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">育人理念</span>
-                        <h3 class="font-bold text-lg mt-2">新时代育人智慧</h3>
-                        <p class="text-slate-600 text-sm mt-2">更新教育育人理念，掌握科学育人、因材施教方法。</p>
-                    </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/32/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">师德修养</span>
-                        <h3 class="font-bold text-lg mt-2">教师师德与职业素养</h3>
-                        <p class="text-slate-600 text-sm mt-2">涵养师德师风，提升教师职业素养与育人情怀。</p>
-                    </div>
-                    <div class="bg-primaryLight rounded-xl p-5 card-shadow card-hover">
-                        <img src="https://picsum.photos/id/33/300/400" alt="书籍封面" class="w-full h-52 object-cover rounded-lg mb-4">
-                        <span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded">专业成长</span>
-                        <h3 class="font-bold text-lg mt-2">教师专业成长之路</h3>
-                        <p class="text-slate-600 text-sm mt-2">助力教师终身学习，实现专业化、系统化成长。</p>
+                    <div id="teacherDetailPanel" class="hidden">
+                        <h3 id="tBookName" class="text-xl font-bold text-[#7B61FF] mb-1"></h3>
+                        <p id="tAuthor" class="text-gray-500 mb-5 border-b pb-3"></p>
+
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-700 mb-2">内容简介</h4>
+                            <p id="tIntro" class="text-gray-600 leading-relaxed"></p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-semibold text-gray-700 mb-2">推荐书评</h4>
+                            <p id="tReview" class="text-gray-600 leading-relaxed"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- 底部 -->
@@ -146,12 +202,13 @@
         <div class="container mx-auto px-4 lg:px-6 text-center">
             <h3 class="text-2xl font-bold mb-3">同读时空</h3>
             <p class="text-slate-400 mb-4">通过读书行动推动学校工作全面发展 </p>
-            <p class="text-slate-500 text-sm">© 博思睿达 （北京）教育咨询有限公司   版权所有</p>
+            <p class="text-slate-500 text-sm">© 博思睿达 （北京）教育咨询有限公司 版权所有</p>
         </div>
     </footer>
 
     <!-- 回到顶部 -->
-    <button id="backTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
+    <button id="backTop"
+        class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-lg opacity-0 invisible transition-all duration-300 hover:bg-primaryDark z-40">
         <i class="fa fa-arrow-up"></i>
     </button>
 
@@ -175,7 +232,99 @@
             backTop.classList.toggle('opacity-0', window.scrollY <= 400);
             backTop.classList.toggle('invisible', window.scrollY <= 400);
         })
-        backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}))
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
+        const teacherBooksData = {
+            t1: {
+                name: "《聪明教学7原理》",
+                author: "作者：苏珊·A·安布罗斯",
+                intro: "依托认知科学研究成果，提炼出学生学习、记忆、知识迁移等7条底层教学规律，用通俗案例讲解如何匹配人脑运行规律设计课堂。",
+                review: "一线教师夯实教学底层逻辑的必读读物，跳出经验式备课，从认知本质设计教学活动，解决学生听得懂、不会用、易遗忘的普遍课堂难题。"
+            },
+            t2: {
+                name: "《思维导图》",
+                author: "作者：东尼·博赞",
+                intro: "讲解思维导图的绘制逻辑、使用方法，可用于备课梳理框架、板书设计、组织学生复习、整理知识点体系。",
+                review: "低成本、高实用性的教学工具手册，既能优化教师备课效率，也可教学生搭建知识网络，改善碎片化记忆问题，适配全学科日常教学。"
+            },
+            t3: {
+                name: "《积极学习101种有效教学策略》",
+                author: "作者：M·希尔伯曼",
+                intro: "汇总101种可直接落地的课堂活动、小组任务、互动练习方案，打破教师单向讲授的沉闷课堂模式。",
+                review: "海量拿来即用的课堂实操方法，快速激活课堂氛围，调动学困生参与意愿，丰富课堂形式，适合日常公开课、常态课优化升级。"
+            },
+            t4: {
+                name: "《引导工具箱》",
+                author: "作者：森 时彦",
+                intro: "配套大量标准化引导工具模板，指导教师组织小组研讨、课堂议题探究、班级主题活动，规范学生合作学习流程。",
+                review: "补齐小组合作流于形式的痛点，教会教师合理把控讨论节奏、聚焦研讨目标，让合作学习真正产生思维碰撞的学习价值。"
+            },
+            t5: {
+                name: "《学习性评价行动建议200条》",
+                author: "作者：剑桥教育",
+                intro: "区分传统考试评价与过程性学习评价，给出课堂提问、随堂反馈、作业批改、自评互评共200条可落地实操细则。",
+                review: "精准对标新课标过程性评价要求，把评价融入每一节日常课堂，依靠即时反馈调整教学进度，精准掌握每位学生真实学情。"
+            },
+            t6: {
+                name: "《为深度学习而教》",
+                author: "作者：杰伊·麦克泰",
+                intro: "讲解如何依托大单元、高阶问题、任务驱动设计课堂，引导学生从浅层识记走向分析、评判、创造等高阶深度学习。",
+                review: "应对应试化浅层学习的优质参考，帮助教师重构课堂目标，设计有深度的学习任务，培养学生思辨能力，适配素养导向的课堂改革。"
+            },
+            t7: {
+                name: "《卓越教师的200条教学策略》",
+                author: "作者：安德烈·雷德芬",
+                intro: "覆盖课堂管理、授课技巧、学情关照、作业设计、师生沟通全场景，200条简短易懂的实战教学策略。",
+                review: "一线教师随身工具书，遇到课堂各类问题均可快速查找对应解法，日积月累补齐教学短板，稳步提升课堂综合执教水平。"
+            },
+            t8: {
+                name: "《如何阅读一本书》",
+                author: "作者：莫提默·J.艾德勒",
+                intro: "划分基础阅读、检视阅读、分析阅读、主题阅读四层阅读方法，传授系统化深度阅读的完整方法论。",
+                review: "教师自身提升文本解读能力的基础书籍，同时可提炼方法传授给学生，提升整本书阅读、课文精读的教学质量。"
+            },
+            t9: {
+                name: "《改善学生课堂表现的50个方法：小技巧获得大改变》",
+                author: "作者：安奈特·布鲁肖",
+                intro: "聚焦课堂纪律混乱、走神讲话、消极抵触等常见问题，给出温和、非对抗式的50个课堂行为管理小方法。",
+                review: "不用强硬管控即可维护课堂秩序，兼顾管教与师生关系，温和纠正学生不良课堂行为，极大降低教师的课堂管理内耗。"
+            },
+            t10: {
+                name: "《课堂研究》",
+                author: "作者：钟启泉",
+                intro: "剖析课堂文化、师生互动、课堂话语、教学误区等深层问题，结合大量本土课堂案例解析优质课堂的内核标准。",
+                review: "拔高教师课堂教研认知，学会审视自己的课堂弊病，从教研视角打磨授课质量，适合教研组集体研读、打磨精品课程。"
+            },
+            t11: {
+                name: "《有效教学决策（第6版）》",
+                author: "作者：威廉·威伦",
+                intro: "按照课前规划、课中实施、课后测评完整流程，搭建一套科学、闭环的教学决策体系。",
+                review: "构建标准化、科学化的完整教学流程，让备课、上课、测评、复盘形成闭环，帮助青年教师快速建立规范的教学工作体系。"
+            },
+
+        }
+
+        // 交互逻辑
+        const tItems = document.querySelectorAll(".book-item");
+        const emptyTip = document.getElementById("teacherEmptyTip");
+        const detailPanel = document.getElementById("teacherDetailPanel");
+        const bookName = document.getElementById("tBookName");
+        const bookAuthor = document.getElementById("tAuthor");
+        const bookIntro = document.getElementById("tIntro");
+        const bookReview = document.getElementById("tReview");
+
+        tItems.forEach(item => {
+            item.addEventListener("click", () => {
+                const key = item.dataset.id;
+                const data = teacherBooksData[key];
+                bookName.innerText = data.name;
+                bookAuthor.innerText = data.author;
+                bookIntro.innerText = data.intro;
+                bookReview.innerText = data.review;
+                emptyTip.classList.add("hidden");
+                detailPanel.classList.remove("hidden");
+            })
+        })
     </script>
 </body>
+
 </html>
