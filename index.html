@@ -56,7 +56,7 @@
     <nav class="fixed top-0 left-0 w-full bg-white z-50 card-shadow transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 lg:px-6 py-4 flex justify-between items-center">
             <!-- Logo品牌 -->
-            <a href="index.html" class="text-primary font-medium border-b-2 border-primary pb-1">毛泽东：“不动笔墨不读书。”</a>
+            <a href="index.html" class="hover:text-primary transition-colors">毛泽东：“不动笔墨不读书。”</a>
 
             <!-- PC端导航菜单 -->
             <div class="hidden md:flex items-center gap-6 lg:gap-8">
@@ -273,43 +273,7 @@
         })
         backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
 
-        // 4. 首页轮播图
-        const carouselWrap = document.getElementById('carouselWrap');
-        const indicators = document.querySelectorAll('.indicator');
-        let currentIndex = 0;
-        const total = 3;
-        let timer = null;
-
-        // 更新轮播样式
-        function updateCarousel() {
-            carouselWrap.style.transform = `translateX(-${currentIndex * 100}%)`;
-            indicators.forEach((item, idx) => {
-                if (idx === currentIndex) {
-                    item.classList.add('bg-white');
-                    item.classList.remove('bg-white/50');
-                } else {
-                    item.classList.add('bg-white/50');
-                    item.classList.remove('bg-white');
-                }
-            })
-        }
-
-        // 自动轮播
-        function autoPlay() {
-            timer = setInterval(() => {
-                currentIndex = (currentIndex + 1) % total;
-                updateCarousel();
-            }, 5000)
-        }
-        autoPlay();
-
-        // 指示器点击切换
-        indicators.forEach((item, idx) => {
-            item.addEventListener('click', () => {
-                currentIndex = idx;
-                updateCarousel();
-            })
-        })
+        
         // ===================== 教研成果卡片点击弹窗详情逻辑 =====================
         // 1. 所有成果完整详情数据
         const activityData = {
