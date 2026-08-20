@@ -337,133 +337,58 @@
 </div >
 
             <script>
-// 读书行动板块详情数据
-                const actionData = {
+
+
+                // 获取所有活动卡片
+                const actionCards = document.querySelectorAll('.action-card');
+                const actionModal = document.getElementById('actionModal');
+                const closeModalBtn = document.getElementById('closeModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalContent = document.getElementById('modalContent');
+
+                // 活动详情数据
+                const actionDetails = {
                     1: {
-                    title: "协助构建学习型学校建设制度体系",
-                content: `
-                <p class="mb-3">我们作为学校专业外脑，结合办学理念、师资结构与发展规划，协助梳理、搭建完整的阅读工作制度体系。</p>
-                <p class="mb-3">包含阅读工作组织架构、师生共读实施方案、阅读活动管理机制、阅读成果评价激励办法、家校协同共读规范等全套制度文本。</p>
-                <p>告别零散临时活动，帮助学校把读书行动纳入常态化办学管理，形成可落地、可考核、可持续的长效运行机制，夯实学习型校园建设顶层根基。</p>
-                `
-    },
-                2: {
-                    title: "共建贴合校情的校本阅读课程",
-                content: `
-                <p class="mb-3">拒绝通用化、模板化阅读资源，联合学校教研团队深度调研本校学情、师资特色与育人目标，共同开发专属校本阅读课程。</p>
-                <p class="mb-3">从书目遴选、课时排布、课例设计、课堂实施到课后拓展活动一体化打造，适配不同学段学生认知水平，融合学科教学与德育育人。</p>
-                <p>配套教案、学习单、共读任务设计，让阅读真正走进课堂，形成具备本校辨识度的特色阅读课程成果。</p>
-                `
-    },
-                3: {
-                    title: "引导学生掌握科学实用的阅读方法",
-                content: `
-                <p class="mb-3">围绕不同年龄段学生阅读能力分层培养，传授系统化、可实操的阅读策略：精读批注、速读梳理、思维导图搭建、文本对比阅读、读后感结构化写作等方法。</p>
-                <p>依托课堂共读、读书任务、阅读工具引导学生从“被动看书”转向“主动会读”，搭建阅读思维框架，提升信息提取、理解思辨与表达输出能力，让学生受益终身，形成自主阅读习惯。</p>
-        `
-    }
-};
+                        title: '协助构建学习型学校建设制度体系',
+                        content: `
+                            <p>我们协助学校建立完善的阅读管理制度，确保校园阅读活动有章可循，形成长效运行机制。</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>制定全员共读管理办法</li>
+                                <li>建立活动考核标准</li>
+                                <li>设计书香校园建设实施方案</li>
+                            </ul>
+                        `
+                    },
+                    2: {
+                        title: '共建贴合校情的校本阅读课程',
+                        content: `
+                            <p>我们与学校联合开发专属校本阅读课程，打造具有校园特色的阅读教育体系。</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>开发各学段配套课程手册</li>
+                                <li>设计单元课时参考案例</li>
+                                <li>提供课堂实施参考范本</li>
+                            </ul>
+                        `
+                    },
+                    3: {
+                        title: '引导学生掌握科学实用的阅读方法',
+                        content: `
+                            <p>我们传授专业的阅读策略，帮助学生培养终身自主阅读能力。</p>
+                            <ul class="list-disc pl-5 mt-2">
+                                <li>教授高效阅读技巧</li>
+                                <li>培养批判性思维能力</li>
+                                <li>提升信息整合与分析能力</li>
+                            </ul>
+                        `
+                    }
+                };
 
-const modal = document.getElementById('actionModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalContent = document.getElementById('modalContent');
-const closeModal = document.getElementById('closeModal');
-const cardList = document.querySelectorAll('.action-card');
-
-// 点击卡片打开弹窗
-cardList.forEach(card => {
-    card.addEventListener('click', () => {
-        const id = card.dataset.id;
-        modalTitle.innerText = actionData[id].title;
-        modalContent.innerHTML = actionData[id].content;
-        modal.classList.remove('hidden');
-    })
-})
-// 关闭弹窗
-closeModal.addEventListener('click', () => modal.classList.add('hidden'));
-modal.addEventListener('click', (e) => {
-    if(e.target === modal) modal.classList.add('hidden');
-})
-    </script>
-
-    // ===================== 教研成果卡片点击弹窗详情逻辑 =====================
-    // 1. 所有成果完整详情数据
-    const activityData = {
-    1: {
-    tag: "课程资源成果",
-    title: "校本阅读课程成果",
-    time: "资料类型：各学段课程手册 + 课时设计案例 + 课堂实施范本",
-    detail: `
-    <p class="mb-4 text-slate-700 leading-relaxed">校本阅读课程依照低、中、高学段学生认知特点分层搭建，贴合校内日常教学节奏，将整本书阅读、课内拓展阅读、课外主题阅读融为一体。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">整套资料包含课程整体实施方案、分单元课时教案、课堂导学任务单、阅读评价量表四类文件，全部经过校内课堂落地试用优化。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">为本校常态化阅读教学提供标准化参考模板，降低教师备课成本，统一校内阅读教学实施标准。</p>
-    <p class="text-primary font-medium">适用人群：全体任课教师、教研管理人员</p>
-    `
-    },
-    2: {
-    tag: "师生作品成果",
-    title: "师生共读优秀成果",
-    time: "资料类型：学生读后感、班级读书小报、教师共读随笔合集",
-    detail: `
-    <p class="mb-4 text-slate-700 leading-relaxed">汇总全校各年级阶段性共读产出内容，筛选优质学生读后感、创意读书小报、班级共读展板作品进行整理归档展示。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">收录一线教师的读书心得、育人感悟、阅读教学反思文稿，搭建师生阅读交流展示窗口。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">以真实作品案例，直观呈现全校共读活动落地成效，营造看得见的书香校园氛围。</p>
-    <p class="text-primary font-medium">成果主体：在校全体师生</p>
-    `
-    },
-    3: {
-    tag: "管理制度成果",
-    title: "校园共读制度文件合集",
-    time: "资料类型：管理办法、考核标准、书香校园建设方案",
-    detail: `
-    <p class="mb-4 text-slate-700 leading-relaxed">整套制度文件构建起全员共读运行闭环，覆盖干部、教师、学生、家长四类群体的共读职责与执行要求。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">明确共读活动开展流程、日常督查方式、评优考核细则、书香阵地建设规范，保障共读工作长效、稳定运行。</p>
-    <p class="mb-4 text-slate-700 leading-relaxed">作为校园阅读工作顶层执行依据，为后续各类读书活动、教研工作提供制度支撑。</p>
-    <p class="text-primary font-medium">适用人群：学校行政干部、全体教职工</p>
-    `
-    }
-    };
-
-    const modal = document.getElementById('activityModal');
-    const modalContent = document.getElementById('modalContent');
-    const closeModalBtn = document.getElementById('closeModal');
-    const activityCards = document.querySelectorAll('.activity-card');
-
-    // 打开弹窗填充内容
-    activityCards.forEach(card => {
-    card.addEventListener('click', () => {
-    const id = card.dataset.id;
-    const data = activityData[id];
-    modalContent.innerHTML = `
-    <span class="inline-block bg-primary/20 text-primary px-3 py-1 rounded text-sm">${data.tag}</span>
-    <h3 class="text-2xl font-bold mt-3 mb-2">${data.title}</h3>
-    <p class="text-slate-500 mb-4"><i class="fa fa-book text-primary mr-2"></i>${data.time}</p>
-    <div class="border-t pt-4">
-        <h4 class="font-semibold text-lg mb-3">成果详情介绍</h4>
-        ${data.detail}
-    </div>
-    `;
-    modal.classList.remove('opacity-0', 'invisible');
-    modal.classList.add('opacity-100', 'visible');
-    document.body.style.overflow = 'hidden';
-    })
-    })
-
-    // 关闭弹窗函数
-    function hideModal() {
-    modal.classList.add('opacity-0', 'invisible');
-    modal.classList.remove('opacity-100', 'visible');
-    document.body.style.overflow = '';
-    }
-    closeModalBtn.addEventListener('click', hideModal);
-    modal.addEventListener('click', (e) => {
-    if (e.target === modal) hideModal();
-    })
-    document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('invisible')) {
-    hideModal();
-    }
-    })
+                // 点击卡片显示模态框
+                actionCards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        const id = card.getAttribute('data-id');
+                        modalTitle.innerHTML = actionDetails[id].title;
+                        modalContent.innerHTML = actionDetails[id].
 
     </script>
 </body>
