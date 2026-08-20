@@ -175,43 +175,7 @@
             </div>
         </section>
 
-        <!-- 七大栏目快捷入口 -->
-        <section class="py-16 container mx-auto px-4 lg:px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">七大阅读板块</h2>
-                <p class="text-slate-600">多维共读体系，打造全方位书香校园</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
-                <a href="index.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-home text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">首页</p>
-                </a>
-                <a href="manager.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-user-circle text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">管理干部同读</p>
-                </a>
-                <a href="teacher.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-graduation-cap text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">教师同读</p>
-                </a>
-                <a href="student.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-book text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">学生同读</p>
-                </a>
-                <a href="parent.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-users text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">家长同读</p>
-                </a>
-                <a href="forum.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-comments text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">主题论坛</p>
-                </a>
-                <a href="contact.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
-                    <i class="fa fa-phone text-primary text-3xl mb-3"></i>
-                    <p class="font-medium">沟通渠道</p>
-                </a>
-            </div>
-        </section>
+
 
 
 
@@ -260,6 +224,44 @@
             </div>
         </section>
 
+
+        <!-- 七大栏目快捷入口 -->
+        <section class="py-16 container mx-auto px-4 lg:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-3">七大阅读板块</h2>
+                <p class="text-slate-600">多维共读体系，打造全方位书香校园</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
+                <a href="index.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-home text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">首页</p>
+                </a>
+                <a href="manager.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-user-circle text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">管理干部同读</p>
+                </a>
+                <a href="teacher.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-graduation-cap text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">教师同读</p>
+                </a>
+                <a href="student.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-book text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">学生同读</p>
+                </a>
+                <a href="parent.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-users text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">家长同读</p>
+                </a>
+                <a href="forum.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-comments text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">主题论坛</p>
+                </a>
+                <a href="contact.html" class="bg-white p-6 rounded-xl card-shadow card-hover text-center">
+                    <i class="fa fa-phone text-primary text-3xl mb-3"></i>
+                    <p class="font-medium">沟通渠道</p>
+                </a>
+            </div>
+        </section>
 
 
     </main>
@@ -323,73 +325,70 @@
                 backTop.classList.remove('opacity-100', 'visible');
             }
         })
-        backTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}))
-
-            <!-- 弹窗模态框 放在页面底部 </body> 之前 -->
-            < div id = "actionModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4" >
-                <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-auto p-8 relative">
-                    <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl">
-                        <i class="fa fa-times"></i>
-                    </button>
-                    <h3 id="modalTitle" class="text-xl font-bold mb-4 text-[#9167D0]"></h3>
-                    <div id="modalContent" class="text-slate-700 leading-relaxed"></div>
-                </div>
-</div >
-
-            <script>
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
-                // 获取所有活动卡片
-                const actionCards = document.querySelectorAll('.action-card');
-                const actionModal = document.getElementById('actionModal');
-                const closeModalBtn = document.getElementById('closeModal');
-                const modalTitle = document.getElementById('modalTitle');
-                const modalContent = document.getElementById('modalContent');
 
-                // 活动详情数据
-                const actionDetails = {
-                    1: {
-                        title: '协助构建学习型学校建设制度体系',
-                        content: `
-                            <p>我们协助学校建立完善的阅读管理制度，确保校园阅读活动有章可循，形成长效运行机制。</p>
-                            <ul class="list-disc pl-5 mt-2">
-                                <li>制定全员共读管理办法</li>
-                                <li>建立活动考核标准</li>
-                                <li>设计书香校园建设实施方案</li>
-                            </ul>
-                        `
-                    },
-                    2: {
-                        title: '共建贴合校情的校本阅读课程',
-                        content: `
-                            <p>我们与学校联合开发专属校本阅读课程，打造具有校园特色的阅读教育体系。</p>
-                            <ul class="list-disc pl-5 mt-2">
-                                <li>开发各学段配套课程手册</li>
-                                <li>设计单元课时参考案例</li>
-                                <li>提供课堂实施参考范本</li>
-                            </ul>
-                        `
-                    },
-                    3: {
-                        title: '引导学生掌握科学实用的阅读方法',
-                        content: `
-                            <p>我们传授专业的阅读策略，帮助学生培养终身自主阅读能力。</p>
-                            <ul class="list-disc pl-5 mt-2">
-                                <li>教授高效阅读技巧</li>
-                                <li>培养批判性思维能力</li>
-                                <li>提升信息整合与分析能力</li>
-                            </ul>
-                        `
-                    }
-                };
+    </script>
+    <!-- 弹窗模态框 放在页面底部 </body> 之前 -->
+    <div id="actionModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-auto p-8 relative">
+            <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 text-xl">
+                <i class="fa fa-times"></i>
+            </button>
+            <h3 id="modalTitle" class="text-xl font-bold mb-4 text-[#9167D0]"></h3>
+            <div id="modalContent" class="text-slate-700 leading-relaxed"></div>
+        </div>
+    </div>
 
-                // 点击卡片显示模态框
-                actionCards.forEach(card => {
-                    card.addEventListener('click', () => {
-                        const id = card.getAttribute('data-id');
-                        modalTitle.innerHTML = actionDetails[id].title;
-                        modalContent.innerHTML = actionDetails[id].
+    <script>
+        // 读书行动板块详情数据
+        const actionData = {
+            1: {
+                title: "协助构建学习型学校建设制度体系",
+                content: `
+            <p class="mb-3">我们作为学校专业外脑，结合办学理念、师资结构与发展规划，协助梳理、搭建完整的阅读工作制度体系。</p>
+            <p class="mb-3">包含阅读工作组织架构、师生共读实施方案、阅读活动管理机制、阅读成果评价激励办法、家校协同共读规范等全套制度文本。</p>
+            <p>告别零散临时活动，帮助学校把读书行动纳入常态化办学管理，形成可落地、可考核、可持续的长效运行机制，夯实学习型校园建设顶层根基。</p>
+        `
+            },
+            2: {
+                title: "共建贴合校情的校本阅读课程",
+                content: `
+            <p class="mb-3">拒绝通用化、模板化阅读资源，联合学校教研团队深度调研本校学情、师资特色与育人目标，共同开发专属校本阅读课程。</p>
+            <p class="mb-3">从书目遴选、课时排布、课例设计、课堂实施到课后拓展活动一体化打造，适配不同学段学生认知水平，融合学科教学与德育育人。</p>
+            <p>配套教案、学习单、共读任务设计，让阅读真正走进课堂，形成具备本校辨识度的特色阅读课程成果。</p>
+        `
+            },
+            3: {
+                title: "引导学生掌握科学实用的阅读方法",
+                content: `
+            <p class="mb-3">围绕不同年龄段学生阅读能力分层培养，传授系统化、可实操的阅读策略：精读批注、速读梳理、思维导图搭建、文本对比阅读、读后感结构化写作等方法。</p>
+            <p>依托课堂共读、读书任务、阅读工具引导学生从“被动看书”转向“主动会读”，搭建阅读思维框架，提升信息提取、理解思辨与表达输出能力，让学生受益终身，形成自主阅读习惯。</p>
+        `
+            }
+        };
 
+        const modal = document.getElementById('actionModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+        const cardList = document.querySelectorAll('.action-card');
+
+        // 点击卡片打开弹窗
+        cardList.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.dataset.id;
+                modalTitle.innerText = actionData[id].title;
+                modalContent.innerHTML = actionData[id].content;
+                modal.classList.remove('hidden');
+            })
+        })
+        // 关闭弹窗
+        closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.add('hidden');
+        })
     </script>
 </body>
 
