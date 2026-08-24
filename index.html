@@ -140,7 +140,7 @@
                         <h3 class="text-lg font-bold mt-3">协助构建学习型学校建设制度体系</h3>
                         <p class="text-slate-600 text-sm mt-2">搭建完整阅读管理制度，打造长效运行的学习型校园。</p>
                         <div class="mt-4 text-[#9167D0] text-sm flex items-center">
-                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                            实践案例 <i class="fa fa-angle-right ml-1"></i>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                         <h3 class="text-lg font-bold mt-3">共建贴合校情的校本阅读课程</h3>
                         <p class="text-slate-600 text-sm mt-2">联合教研开发专属校本阅读课程，打造校园阅读特色。</p>
                         <div class="mt-4 text-[#9167D0] text-sm flex items-center">
-                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                            实践案例 <i class="fa fa-angle-right ml-1"></i>
                         </div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
                         <h3 class="text-lg font-bold mt-3">引导学生掌握科学实用的阅读方法</h3>
                         <p class="text-slate-600 text-sm mt-2">传授专业阅读策略，培养学生终身自主阅读能力。</p>
                         <div class="mt-4 text-[#9167D0] text-sm flex items-center">
-                            查看详情 <i class="fa fa-angle-right ml-1"></i>
+                            实践案例 <i class="fa fa-angle-right ml-1"></i>
                         </div>
                     </div>
                 </div>
@@ -341,55 +341,82 @@
         </div>
     </div>
 
-    <script>
-        // 读书行动板块详情数据
-        const actionData = {
-            1: {
-                title: "协助构建学习型学校建设制度体系",
-                content: `
-            <p class="mb-3">我们作为学校专业外脑，结合办学理念、师资结构与发展规划，协助梳理、搭建完整的阅读工作制度体系。</p>
-            <p class="mb-3">包含阅读工作组织架构、师生共读实施方案、阅读活动管理机制、阅读成果评价激励办法、家校协同共读规范等全套制度文本。</p>
-            <p>告别零散临时活动，帮助学校把读书行动纳入常态化办学管理，形成可落地、可考核、可持续的长效运行机制，夯实学习型校园建设顶层根基。</p>
+// 读书行动板块【实践案例】弹窗数据，图文混排，图片自行放入images文件夹
+const actionData = {
+    1: {
+        title: "协助构建学习型学校建设制度体系 — 实践案例",
+        content: `
+            <div class="mb-4">
+                <img src="images/index-1.jpg" alt="制度建设落地案例" class="w-full rounded-lg mb-4">
+            </div>
+            <p class="mb-3">【合作案例】某公办小学读书行动制度搭建项目</p>
+            <p class="mb-3">项目前期，我们进校开展多轮访谈，对接校长、德育主任、教研组长、一线教师，梳理学校现有阅读工作痛点：活动零散、无考核标准、缺少固定管理流程。</p>
+            <p class="mb-3">我们提供全流程制度协助搭建服务：共同撰写《校园读书行动实施方案》《师生共读评价激励制度》《班级阅读角管理规范》《家校共读协同细则》全套文档，配套组织架构分工表。</p>
+            <p>落地成果：学校将阅读工作纳入年度办学考核，实现学期有规划、月度有活动、期末有评价，阅读工作从临时活动转变为常态化办学工作。</p>
         `
-            },
-            2: {
-                title: "共建贴合校情的校本阅读课程",
-                content: `
-            <p class="mb-3">拒绝通用化、模板化阅读资源，联合学校教研团队深度调研本校学情、师资特色与育人目标，共同开发专属校本阅读课程。</p>
-            <p class="mb-3">从书目遴选、课时排布、课例设计、课堂实施到课后拓展活动一体化打造，适配不同学段学生认知水平，融合学科教学与德育育人。</p>
-            <p>配套教案、学习单、共读任务设计，让阅读真正走进课堂，形成具备本校辨识度的特色阅读课程成果。</p>
+    },
+    2: {
+        title: "共建贴合校情的校本阅读课程 — 实践案例",
+        content: `
+            <div class="mb-4">
+                <img src="images/index-2.jpg" alt="校本课程共建案例" class="w-full rounded-lg mb-4">
+            </div>
+            <p class="mb-3">【合作案例】某初中校本整本书阅读课程开发项目</p>
+            <p class="mb-3">结合学校“传统文化育人”办学特色，联合语文教研组，筛选适配初中三个年级的经典书目，划分学期阅读任务。</p>
+            <p class="mb-3">共同设计配套课时教案、课堂共读任务单、拓展实践活动方案，打造分层阅读课例：初一趣味导读、初二深度研读、初三思辨读写。</p>
+            <p>落地成果：形成完整校本阅读课程手册，在校内常态化开课，多次面向区域开展阅读公开课展示，打造学校阅读办学特色。</p>
         `
-            },
-            3: {
-                title: "引导学生掌握科学实用的阅读方法",
-                content: `
-            <p class="mb-3">围绕不同年龄段学生阅读能力分层培养，传授系统化、可实操的阅读策略：精读批注、速读梳理、思维导图搭建、文本对比阅读、读后感结构化写作等方法。</p>
-            <p>依托课堂共读、读书任务、阅读工具引导学生从“被动看书”转向“主动会读”，搭建阅读思维框架，提升信息提取、理解思辨与表达输出能力，让学生受益终身，形成自主阅读习惯。</p>
+    },
+    3: {
+        title: "引导学生掌握科学实用的阅读方法 — 实践案例",
+        content: `
+            <div class="mb-4">
+                <img src="images/index-3.jpg" alt="阅读方法教学案例" class="w-full rounded-lg mb-4">
+            </div>
+            <p class="mb-3">【合作案例】乡镇小学阅读能力提升项目</p>
+            <p class="mb-3">针对学生只会通读、不会精读，读后感写作空洞的问题，进校开展教师培训+学生课堂示范教学。</p>
+            <p class="mb-3">落地分层阅读工具：低年级学习批注勾画、故事思维导图；中高年级学习速读、人物对比分析、结构化书评写作，配套印制学生阅读学习手册。</p>
+            <p>落地成果：学生阅读思辨能力明显提升，学校产出大量优秀学生阅读作品，可用于校园成果展示。</p>
         `
-            }
-        };
+    }
+};
 
-        const modal = document.getElementById('actionModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalContent = document.getElementById('modalContent');
-        const closeModal = document.getElementById('closeModal');
-        const cardList = document.querySelectorAll('.action-card');
+// 弹窗交互逻辑
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('actionModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+    const cardList = document.querySelectorAll('.action-card');
 
-        // 点击卡片打开弹窗
-        cardList.forEach(card => {
-            card.addEventListener('click', () => {
-                const id = card.dataset.id;
-                modalTitle.innerText = actionData[id].title;
-                modalContent.innerHTML = actionData[id].content;
-                modal.classList.remove('hidden');
-            })
+    // 点击卡片打开弹窗
+    cardList.forEach(card => {
+        card.addEventListener('click', () => {
+            const id = card.dataset.id;
+            modalTitle.innerText = actionData[id].title;
+            modalContent.innerHTML = actionData[id].content;
+            modal.classList.remove('hidden');
         })
-        // 关闭弹窗
-        closeModal.addEventListener('click', () => modal.classList.add('hidden'));
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.add('hidden');
-        })
+    })
+    // 关闭弹窗
+    closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('hidden');
+    })
+})
+
     </script>
+    <!-- 弹窗容器（放在页面body内全局位置，只写一次） -->
+<div id="actionModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4">
+  <div class="bg-white rounded-xl w-full max-w-2xl max-h-[85vh] overflow-auto p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h3 id="modalTitle" class="text-xl font-bold"></h3>
+      <button id="closeModal" class="text-slate-500 hover:text-black text-xl">&times;</button>
+    </div>
+    <div id="modalContent" class="text-slate-700"></div>
+  </div>
+</div>
+
 </body>
 
 </html>
