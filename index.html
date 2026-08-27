@@ -254,16 +254,16 @@
         </section>
     </main>
 
-    <!-- 【实践案例&反馈PDF弹窗容器】复用同一个弹窗 -->
+<!-- 【实践案例&反馈PDF弹窗容器】修改：PDF占屏幕3/4高度 -->
     <div id="actionModal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[85vh] overflow-hidden flex flex-col">
-            <div class="px-6 py-4 border-b flex justify-between items-center">
+        <div class="bg-white rounded-xl max-w-4xl w-full flex flex-col" style="max-height:85vh;">
+            <div class="px-6 py-4 border-b flex justify-between items-center flex-shrink-0">
                 <h3 id="modalTitle" class="text-xl font-bold text-[#9167D0]"></h3>
                 <button id="closeModal" class="text-slate-400 hover:text-slate-800 text-xl">
                     <i class="fa fa-times"></i>
                 </button>
             </div>
-            <div id="modalContent" class="flex-1 overflow-hidden">
+            <div id="modalContent" style="flex:1;">
             </div>
         </div>
     </div>
@@ -395,17 +395,18 @@
                 })
             })
 
-            //=====学校来信反馈卡片，打开PDF iframe
+            //=====学校来信反馈卡片，打开PDF iframe 高度75vh，占屏幕3/4
             const feedbackCards = document.querySelectorAll('.feedback-card');
             feedbackCards.forEach(card=>{
                 card.addEventListener('click',()=>{
                     const id = card.dataset.id;
                     const item = feedbackData[id];
                     modalTitle.innerText = item.title;
-                    modalContent.innerHTML = `<iframe src="${item.pdfUrl}" width="100%" height="75vh" style="border:none;"></iframe>`;
+                    modalContent.innerHTML = `<iframe src="${item.pdfUrl}" width="100%" height="75vh" style="border:none;display:block;"></iframe>`;
                     modal.classList.remove('hidden');
                 })
             })
+            
 
             //关闭弹窗，清空iframe，避免后台继续加载pdf
             closeModal.addEventListener('click', () => {
